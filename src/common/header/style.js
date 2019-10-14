@@ -48,5 +48,7 @@ export const NavItem = styled.span`
         /* background-color: green; */
         border: 1px solid #ea6f5a;
         border-radius: 14px;
+        float: right;
+        margin-right: 20px;
     }
 `;
