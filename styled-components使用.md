@@ -101,6 +101,7 @@ render() {
 一旦动画入场，插件会自动为包裹住的标签添加很多css样式，所以我们需要给CSSTransition标签添加上classNames，
 入场时： 添加 .slide-enter .slide-enter-active
 出厂时： 添加 .slide-exit .slide-exit-active
+
 2. TransitionGroup 如果需要为多个dom元素添加动画效果，需要使用 TransitionGroup
 -----------------------------
 
