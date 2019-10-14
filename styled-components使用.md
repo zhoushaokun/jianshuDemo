@@ -51,20 +51,20 @@ export const GlobalStyle = styled.createGlobalStyle`
 ```
 <GlobalStyle></GlobalStyle>
 ```
------
+-----------------
 
 ## IconFont的使用
-1 https://www.iconfont.cn/ 上选好要用的图标并下载，选择 .eot .svg .ttf .woff iconfont.css 的文件保留
-2 在根目录的 static 文件下创建iconfont 文件夹，将上述的文件复制进去
-3 iconfont.css 文件@font-face下对引入的 .eot .ttf .svg 文件的路径添加 ./ （当前路径）。
-4 实现iconfont.css 的样式文件全局注入，使用 styled-components 的方法注入
+1. https://www.iconfont.cn/ 上选好要用的图标并下载，选择 .eot .svg .ttf .woff iconfont.css 的文件保留
+2. 在根目录的 static 文件下创建iconfont 文件夹，将上述的文件复制进去
+3. iconfont.css 文件@font-face下对引入的 .eot .ttf .svg 文件的路径添加 ./ （当前路径）。
+4. 实现iconfont.css 的样式文件全局注入，使用 styled-components 的方法注入
 ```
 import { styled } from "styled-componets";
 export const GlobalIconFont = styled.createGlobalStyle`
 	/*样式代码*/
 `; 
 ```
-5 引入图标
+5. 引入图标
 ```
 <i className="iconfont">unicode 码</i>
 ```
@@ -84,7 +84,7 @@ render() {
 	);
 }
 ```
------
+-----------------------
 
 ## react 动画组件-react-transition-group
 1. CSSTransition
