@@ -1,4 +1,4 @@
-##styled-components使用
+## styled-components使用
 如何定义一个有样式的组件
 1. 基本使用
 const HeaderWrapper = styled.div`
@@ -51,20 +51,20 @@ export const GlobalStyle = styled.createGlobalStyle`
 ```
 <GlobalStyle></GlobalStyle>
 ```
------
+-----------------
 
-##IconFont的使用
-1 https://www.iconfont.cn/ 上选好要用的图标并下载，选择 .eot .svg .ttf .woff iconfont.css 的文件保留
-2 在根目录的 static 文件下创建iconfont 文件夹，将上述的文件复制进去
-3 iconfont.css 文件@font-face下对引入的 .eot .ttf .svg 文件的路径添加 ./ （当前路径）。
-4 实现iconfont.css 的样式文件全局注入，使用 styled-components 的方法注入
+## IconFont的使用
+1. https://www.iconfont.cn/ 上选好要用的图标并下载，选择 .eot .svg .ttf .woff iconfont.css 的文件保留
+2. 在根目录的 static 文件下创建iconfont 文件夹，将上述的文件复制进去
+3. iconfont.css 文件@font-face下对引入的 .eot .ttf .svg 文件的路径添加 ./ （当前路径）。
+4. 实现iconfont.css 的样式文件全局注入，使用 styled-components 的方法注入
 ```
 import { styled } from "styled-componets";
 export const GlobalIconFont = styled.createGlobalStyle`
 	/*样式代码*/
 `; 
 ```
-5 引入图标
+5. 引入图标
 ```
 <i className="iconfont">unicode 码</i>
 ```
@@ -84,9 +84,9 @@ render() {
 	);
 }
 ```
------
+-----------------------
 
-##react 动画组件，react-transition-group
+## react 动画组件-react-transition-group
 1. CSSTransition
 将 CSSTransition 包裹在需要动画效果的组件外边，
 ```
@@ -101,6 +101,7 @@ render() {
 一旦动画入场，插件会自动为包裹住的标签添加很多css样式，所以我们需要给CSSTransition标签添加上classNames，
 入场时： 添加 .slide-enter .slide-enter-active
 出厂时： 添加 .slide-exit .slide-exit-active
+
 2. TransitionGroup 如果需要为多个dom元素添加动画效果，需要使用 TransitionGroup
 -----------------------------
 
@@ -150,7 +151,7 @@ render() {
 		   存放整个 header 组件下所有的常量
 ------------------------
 
-##immutable.js 的使用
+## immutable.js 的使用
 问题：如果不适用 immutable.js 需要手动保证 state 不被修改，而使用 immutable.js 则会帮助开发者保证 state 是不被修改的。
 1. 安装 immutable.js 库
 2. 将state 转为一个 immutable 的对象
@@ -175,7 +176,7 @@ render() {
     需将根目录下组装 reducer 的combineReducers 方法替换为 redux-immutable库的combineReducers 方法；
     取数据变为：state.get('header').get('focused'),或者简写为：取深度过深的数据，state.getIn(['header', 'focused']);
 ----------------
-##组件按条件显示的实现
+## 组件按条件显示的实现
 1. 函数返回值形式实现组件按条件显示
 以搜索框的 下拉搜索（热门搜索）为例，热门搜索在搜索框获得焦点的时候才会显示，所以可以这么写：
 ```
@@ -203,7 +204,7 @@ render() {
 ```
 --------------
 
-##redux-thunk 的异步分发action
+## redux-thunk 的异步分发action
 1. redux-thunk 提供了 thunk 的中间件，它可以建立 异步action 与store 的连接
     ```
         import thunk from "redux-thunk";
@@ -238,7 +239,7 @@ render() {
 2. switch case
 ------------
 
-##换一批
+## 换一批
 1. pageNum 与 totalPageNum使用
     关键：每次点击“换一批”时，都是切换当前的页码，从1到Math.ceil(list.length/pageSize)再回到1以此循环。因此，需要给 header 下的state 添加 pageNum和totalPageNum的状态。
     header 组件下，获取当前页码pageNum和list，然后由pageSize和pageNum获取当前应该显示的条目索引范围，进而获取应该显示的条目。
