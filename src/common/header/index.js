@@ -6,6 +6,7 @@ import {
     NavRight,
     NavLeft,
     NavItem,
+    SearchInput,
 } from "./style";
 
 export default class Header extends Component {
@@ -18,6 +19,7 @@ export default class Header extends Component {
                         <NavItem>首页</NavItem>
                         <NavItem>下载App</NavItem> 
                     </NavLeft>
+                    <SearchInput></SearchInput>
                     <NavRight>
                         <NavItem>Aa</NavItem>
                         <NavItem>贝塔</NavItem>

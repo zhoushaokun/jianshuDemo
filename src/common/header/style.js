@@ -30,7 +30,7 @@ export const Nav = styled.div`
     float: left;
 `;
 export const NavLeft = styled.div`
-    width: 50%;
+    width: 20%;
     height: 100%;
     float: left;
 `;
@@ -51,4 +51,17 @@ export const NavItem = styled.span`
         float: right;
         margin-right: 20px;
     }
+`;
+
+export const SearchInput = styled.input.attrs({
+    placeholder: "搜索"
+})`
+    border: none;
+	outline: none;
+    border-radius: 18px;
+    padding: 0 30px 0 20px;
+    width: 20%;
+    float: left;
+    background: #eee;
+    height: 36px;
 `;
